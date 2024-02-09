@@ -16,6 +16,7 @@ def home_page(request):
         email = request.POST.get('email')
         name = request.POST.get('name')
         message = request.POST.get('message')
+        send_gmail(email, name, message)
 
     context = {
         'main_text': main_text,
